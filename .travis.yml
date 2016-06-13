@@ -4,3 +4,10 @@ php:
   - 5.4
   - hhvm
 script: phpunit Test.php
+
+# Email specific recipient all the time
+notifications:
+  email:
+    recipients:
+      - sohiljain.cs91@gmail.com
+  on_success: always # default: change
