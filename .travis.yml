@@ -1,9 +1,10 @@
 language: php
-php:
-  - 5.5
+#php:
+#  - 5.5
 #  - 5.4
 #  - hhvm
 #script: phpunit Test.php
+script: aws opsworks --region us-east-1 create-deployment --stack-id e07831df-bdf5-4855-a593-9f7dee8d5612 --app-id 282d2ffb-09e8-43f0-bdef-850997fb238d --command "{\"Name\":\"deploy\"}"
 
 deploy:
   provider: opsworks
